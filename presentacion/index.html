@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Front-end</title>
+	
+	<link href="slideshow.css" rel="stylesheet" />
+	<link href="theme.css" rel="stylesheet" />
+	<link href="talk.css" rel="stylesheet" />
+	<script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="60">
+<section>
+	<header class="slide first">
+		<h1>Introducción a desarrollo Front-end</h1>
+	</header>
+
+	<section class="slide">
+		<h3>Software... es coomo las cebollas</h3>
+		<ul>
+			<li class="delayed">¿Apesta?</li>
+			<li class="delayed">¿Te hace llorar?</li>
+		</ul>
+		<h2 class="delayed">NO<span class="delayed" style="font-size:20%">(bueno... quizás a veces...)</span></h2>
+		<ul>
+			<li class="delayed">CAPAS</li>
+			<li class="delayed">Las cebollas como el software tienen capas</li>
+		</ul>
+		<img class="delayed" src="img/kappa.png">
+	</section>
+	<section class="slide">
+		<h3>Software... es coomo las cebollas</h3>
+		<img src="img/maxresdefault.jpg" style="width: 100%">
+	</section>
+
+	<section class="slide">
+		<h3>Separación de intereses</h3>
+		<ul>
+			<li class="delayed">Los terminos front-end y back-end definen la separación de intereses entre dos partes de un programa</li>
+			<li class="delayed">Front-end lidia con la capa de presentación, lo que se muestra al usuario</li>
+			<li class="delayed">Back-end lidia con la capa de acceso de datos</li>
+		</ul>
+            <p class="presenter-notes">
+	    	La separacion de intereses en un principio de diseño en el que el software se separa en partes y cada parte tiene su responsabilidad, en este caso la presentación al usuario y el acceso a datos
+            </p>
+	</section>
+
+	<section class="slide">
+		<h3>Separación de intereses</h3>
+		<div style="text-align: center; height:100%">
+			<img src="img/iceberg.jpg" style="height: 100%">
+		</div>
+	</section>
+	
+	<section class="slide">
+		<h2>Web front-end</h2>
+		<ul>
+			<li class="delayed">Programación de código del lado del cliente</li>
+			<li class="delayed">La parte de una aplicación web con la que puede interactuar el usuario directamente</li>
+            <li class="delayed">Independiente de tecnologías de Back-end</li>
+            <p class="presenter-notes">
+                Client-side development is the practice of producing HTML, CSS and JavaScript for a website or web application so that a user can see and interact with them directly
+                <br>
+                En el proceso de diseño es el puente entre los diseños y el back-end
+            </p>
+		</ul>
+	</section>
+	
+	<section class="slide">
+		<h2>Componentes</h2>
+		<ul>
+			<li class="delayed">HTML</li>
+			<li class="delayed">CSS</li>
+			<li class="delayed">JavaScript</li>
+            <p class="presenter-notes">
+                HTML Define la base de como se verá el sitio al final <br>
+                CSS controla la presentación del sitio y le da estilo a los elementos definidos en HTML
+                Javascript transforma una página estática de HTML en una página dinámica por medio de manejo de interacciones.
+                Javascript también provee una forma de comunicarse con servicios a traves de AJAX y traer contenido dinámico
+            </p>
+		</ul>
+	</section>
+	
+	<section class="slide">
+		<h2>HTML</h2>
+        <div>
+        <pre>
+            <code lang="html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Ejemplo de HTML</title>
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Un ejemplo de html</h1>
+        &lt;p&gt;Ejemplo html</p>
+        &lt;ul&gt;
+            &lt;li&gt;Dominar el mundo</li>
+            &lt;li&gt;Dominar la galaxia</li>
+            &lt;li&gt;Dominar el universo</li>
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+        </pre>
+        </div>
+            <p class="presenter-notes">
+                HTML Define la estructura del proyecto, que elementos debe llevar, que controles se van a mostrar
+            </p>
+	</section>
+</section>
+
+<section>
+	<section class="slide">
+		<h2>CSS</h2>
+		<p>Ejemplo de CSS</p>
+		<pre><code lang="css">#identificador{
+	background-color:red;
+	background-image: linear-gradient(red, #600)
+}
+
+.clase{
+	border: 10px solid black;
+	margin-right: 5px;
+}</code></pre>
+    <p class="presenter-notes">
+	CSS Define la presentación, el estilo de los proyectos. Como se verán los elementos del html
+    </p>
+	</section>
+	
+	<section class="slide">
+		<h2>Javascript</h2>
+		<pre><code lang="javascript">// Comment
+document.addEventListener('DOMAttrModified',function(e) {
+  var node = e.target, attr = e.attrName;
+  if(/^input$/i.test(node.nodeName) 
+    &amp;&amp; (attr === 'placeholder' || attr === 'value')
+    || foo > 5)
+      Placeholder.update(node);
+}, false);</code></pre>
+	    <p class="presenter-notes">
+		JS Define la lógica, cómo actuaran los elementos al tener interacciones con el usuario y puede definir la comunicación con el back end
+	    </p>
+	</section>
+</section>
+<footer class="slide" title="The End">
+	<h2>Thank you!</h2>
+	<p>Get it or contribute at <a href="http://github.com/LeaVerou/CSSS">http://github.com/LeaVerou/CSSS</a></p>
+	<p>Credits:</p>
+	<ul>
+		<li><a href="http://lukeroberts.us/2008/12/wallpaper-colourful-wood/">Colored wood background by Luke Roberts</a></li>
+		<li>The name CSSS is actually inspired by S5, as you could probably guess ;-)</li>
+		<li>A big thanks to the community at Github for various contributions to this project</li>
+	</ul>
+</footer>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+	new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+	new CSSControl(cssControls[i]);
+}
+</script>
+	
+</body>
+</html>
