@@ -1,0 +1,27 @@
+.icon{
+ border: 5px solid #CCC;
+ padding: 5px;
+ display:block;
+ float: left;
+ margin: 5px;
+ border-radius: 10px;
+}
+
+#hulk.icon:hover{
+  border-color: green;
+}
+#hawkeye.icon:hover{
+  border-color: purple;
+}
+#nick.icon:hover{
+  border-color: grey;
+}
+#widow.icon:hover{
+  border-color: black;
+}
+#ironman.icon:hover{
+  border-color: red;
+}
+#thor.icon:hover{
+  border-color: yellow;
+}
