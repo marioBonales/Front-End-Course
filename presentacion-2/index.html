@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Front-end</title>
+    
+    <link href="slideshow.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+    <script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="60">
+<section>
+    <header class="slide first">
+        <h1>HTML y CSS</h1>
+    </header>
+
+    <section class="slide">
+        <h1>Selectores</h1>
+        <ul>
+            <li>Tag</li>
+            <li>Id</li>
+            <li>Class</li>
+            <li>Pseudo Selectors o Pseudo Classes</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Tags</h2>
+        <pre><code lang="css">button{
+}
+
+#privacyPolicy{
+}
+.warningButton
+{
+
+}
+.warningButton:hover{}</code></pre>
+
+    </section>
+
+    <section class="slide">
+        <h1>Pseudo Clases</h1>
+        <div class="delayed" style="height:100%; text-align: center">
+            <img src="img/pseudoclases.png" style="height: 100%">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h1>Reglas de css ID</h1>
+        <div id="cuadrito"></div>
+        <textarea class="snippet" data-raw style="margin-top:15px;">
+#cuadrito{
+background-color: red;
+height: 256px;
+width: 256px;
+margin: auto;
+}
+        </textarea>
+    </section>
+
+    <section class="slide">
+        <h1>Reglas de css clases</h1>
+        <div class="contenedor">
+            <div class="cuadrito"></div>
+            <div class="cuadrito"></div>
+            <div class="cuadrito"></div>
+        </div>
+        <textarea class="snippet" data-raw style="margin-top:15px;">
+.cuadrito{
+background-color: red;
+height: 256px;
+width: 256px;
+margin: auto;
+float: left;
+}
+.contenedor{
+margin: auto;
+width: 768px;
+}
+        </textarea>
+    </section>
+
+    <section class="slide">
+        <h1>Box Model</h1>
+        <div style="height:100%; text-align: center">
+            <img src="img/boxmodel.png" style="height: 100%">
+        </div>
+    </section>
+
+<footer class="slide" title="The End">
+</footer>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+    new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+    new CSSControl(cssControls[i]);
+}
+</script>
+    
+</body>
+</html>
