@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Front-end</title>
+    <link href="slideshow.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+    <script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="60">
+<section>
+    <header class="slide first">
+        <h1>Javascript y JQuery</h1>
+    </header>
+
+    <section class="slide">
+        <h1>Temas</h1>
+        <ul>
+            <li>Variables (Static Typing vs Dynamic typing)</li>
+            <li>Operadores Lógicos</li>
+            <li>Programación Funcional</li>
+            <li>Event bubbling</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Variables en JS</h2>
+        <pre><code lang="javascript">
+        var a = 1;
+        var b = "Prueba", c = true;
+</code></pre>
+    </section>
+
+    <section class="slide">
+        <h1>Static Typing vs Dynamic Typing</h1>
+        <div style="height:100%; text-align: center">
+            <img src="img/static.jpg" style="height: 100%">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h1>Operadores Lógicos</h1>
+        <pre><code lang="javascript">
+        "15" == 15 // True
+        "15" === 15 // False
+
+        "1" == true // True
+        [1] == true // True
+        1 == true // True
+        0 == false // True
+        "" == false // True
+</code></pre>
+    </section>
+
+    <section class="slide">
+        <h1>Programación Funcinoal</h1>
+        <pre><code lang="javascript">
+        (
+        function main () {
+            var elementos = [1,2,3];
+            $("#test").click(function testClick() {
+                $(".modal").show();
+                elementos.forEach( function (elemento) {
+                    console.log(elemento);
+                });
+            })
+        )();
+</code></pre>
+    </section>
+
+    <section class="slide">
+        <h1>Event Bubbling</h1>
+        <img src="img/bubble.png" style="height: 100%">
+    </section>
+
+    <section class="slide">
+        <h1>Jquery</h1>
+        <ul>
+            <li class="delayed">Librería con el objetivo de escrbir menos para hacer más</li>
+            <li class="delayed">Una de las librerías más usadas en Webdev</li>
+            <li class="delayed">Manejo de eventos y Manipulación de html</li>
+            <li class="delayed">Utiliza los selectores de CSS</li>
+            <li class="delayed">http://try.jquery.com</li>
+        </ul>
+        <pre class="delayed"><code lang="javascript">
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".test").hide();
+    });
+});
+</code></pre>
+    </section>
+
+<footer class="slide" title="The End">
+</footer>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+    new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+    new CSSControl(cssControls[i]);
+}
+</script>
+    
+</body>
+</html>
