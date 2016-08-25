@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Front-end</title>
+    
+    <link href="slideshow.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+    <script src="prefixfree.min.js"></script>
+</head>
+<body data-duration="60">
+<section>
+    <header class="slide first">
+        <h1>APIs</h1>
+    </header>
+
+    <section class="slide">
+        <h2>Temas</h2>
+        <ul>
+            <li>Definición de API</li>
+            <li>Verbos de HTTP</li>
+            <li>JSON</li>
+            <li>JQuery ajax</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>API</h2>
+        <p class="delayed">API o Appilication program Interface es una Interfaz de comunicación con algún servidor para obtener o mandar datos</p>
+        <p class="delayed">Permite la interacción entre el código del cliente (Javascript) y el Código del servidor</p>
+    </section>
+    <section class="slide">
+        <h1>Verbos de HTTP</h1>
+        <div style="height:100%; text-align: center">
+            <img src="img/verbos.png" style="height: 100%">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h1>GET y POST</h1>
+        <p class="delayed">
+            <b>GET</b> sirve para leer contenido, para obtener información del servidor ya sea para desplegarla o programáticamente decidir algo con respecto a ella
+        </p>
+        <p class="delayed">
+            <b>POST</b> sirve para crear contenido, para mandar información nueva al server la cual se almacenará a base de datos o pasará por procesos del lado del servidor.
+        </p>
+    </section>
+
+    <section class="slide">
+        <h1>PUT y DELETE</h1>
+        <p class="delayed">
+            <b>PUT</b> sirve para actualizar contenido existente, actualiza algún registro en el servidor
+        </p>
+        <p class="delayed">
+            <b>DELETE</b> sirve para borrar contenido
+        </p>
+    </section>
+
+    <section class="slide">
+        <h1>JSON</h1>
+        <div style="width:100%; text-align: center">
+            <img src="img/json.png" style="height: 100%">
+        </div>
+    </section>
+
+    <section class="slide">
+        <h1>JQuery AJAX</h1>
+        <p>AJAX se refiere a un script que actualiza el contenido de una página sin necesidad de refrescar la página</p>
+        <p>Jquery tiene sus métodos para utilizar AJAX y APIs incluidos</p>
+        <pre><code lang="javascript">
+$.ajax({
+  url: url,
+  data: data,
+  success: success,
+  dataType: dataType
+});
+$.get(url, data, success, dataType);
+$.post(url, data, success, dataType);
+</code></pre>
+    </section>
+
+<script src="slideshow.js"></script>
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+<script>
+var slideshow = new SlideShow();
+
+var snippets = document.querySelectorAll('.snippet');
+for(var i=0; i<snippets.length; i++) {
+    new CSSSnippet(snippets[i]);
+}
+
+var cssControls = document.querySelectorAll('.css-control');
+for(var i=0; i<cssControls.length; i++) {
+    new CSSControl(cssControls[i]);
+}
+</script>
+    
+</body>
+</html>
