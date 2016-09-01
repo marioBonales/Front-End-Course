@@ -7,12 +7,12 @@
 // IRONMAN : 1009624
 // HAWKEYE : 1009338
 var mapa = {
-    thor: "Thor",
-    nick: "Nick Fury",
-    widow: "Black Widow",
-    ironman: "Iron-man",
-    hulk: "The Incredible Hulk",
-    hawkeye: "Hawkeye"
+    thor: { nombre: "Thor", id: 1009664 },
+    nick: { nombre: "Nick Fury", id: 1009471 },
+    widow: { nombre: "Black Widow", id: 1009189 },
+    ironman: { nombre: "Iron-man", id: 1009624 },
+    hulk: { nombre: "The Incredible Hulk", id: 1009351 },
+    hawkeye: { nombre: "Hawkeye", id: 1009338 }
 };
 $(function () {
     'use strict';
@@ -24,9 +24,10 @@ $(function () {
         event.preventDefault();
         // Obtener el id del elemento al que se le dio click
         var id = $(event.currentTarget).attr("id");
+        var marvelId = mapa[id].id;
         //Reemplazar el nombre del heroe
-        $(".heroe").text(mapa[id]);
-        var url = 'https://gateway.marvel.com:443/v1/public/characters/1009351';
+        $(".heroe").text(mapa[id].nombre);
+        var url = 'https://gateway.marvel.com:443/v1/public/characters/' + marvelId;
         $.get(url, { apikey: '230e8bed4233bbebfaaadf119690dc1a'}).done(
             function (respuesta) {
                 var descripcion = respuesta.data.results[0].description;
